@@ -1,4 +1,4 @@
-const totalAttemptsToInitiate = 2000;
+const totalAttemptsToInitiate = 20;
 const waitsBetweenInitiateAttempts = 1000;
 const replicaSetConfig = {
   _id: "rs1",
@@ -9,11 +9,6 @@ const replicaSetConfig = {
     { _id: 2, host: "mongo3:27017", priority: 0.5 },
   ],
 };
-
-initializeReplicaSet(replicaSetConfig, totalAttemptsToInitiate);
-waitForPrimary(20, "PRIMARY ready!");
-print("Setting profiling level 2");
-db.setProfilingLevel(2);
 
 function initiateReplicaSet(config) {
   print("initiateReplicaSet");
@@ -66,3 +61,8 @@ function initializeReplicaSet(config, attempts) {
   }
   throw "Failed to configure a replica set.";
 }
+
+initializeReplicaSet(replicaSetConfig, totalAttemptsToInitiate);
+waitForPrimary(20, "PRIMARY ready!");
+print("Setting profiling level 2");
+db.setProfilingLevel(2);
