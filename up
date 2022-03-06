@@ -1,10 +1,11 @@
 #!/bin/bash
+networkName=rs-network
 
 echo "Creating network 'rs-network'..."
-docker network create -d bridge rs-network
+docker network create -d bridge $networkName
 
-./startMongo 1 
+./startMongo 1 $networkName
 
-./startMongo 2
+./startMongo 2 $networkName
 
-./startMongo 3
+./startMongo 3 $networkName
