@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Creating network 'rs-network'..."
+docker network create -d bridge rs-network
+
+./startMongo 1 
+
+./startMongo 2
+
+./startMongo 3
