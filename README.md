@@ -1,6 +1,6 @@
 # Dockerized Mongo Replica Set
 
-This code setups a local `Docker` based `MongoDB` replica set using the official docker image from mongo.
+This code can setup a local `Docker` based `MongoDB` replica set without using `docker-compoese`.
 
 ## Run
 
