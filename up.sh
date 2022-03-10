@@ -6,6 +6,6 @@ docker network create -d bridge $networkName
 
 ./startPrimary.sh $networkName
 
-# ./startArbiter.sh $networkName
+./startArbiter.sh $networkName
 
-# ./startSecondary.sh $networkName
+./startSecondary.sh $networkName
