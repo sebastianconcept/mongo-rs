@@ -1,8 +1,8 @@
 #!/bin/bash
-imageName=bitnami/mongodb:4.4
+imageName=$1
 
 containerName=mongo2
-networkName=$1
+networkName=$2
 dataDir=data/node2
 logDir=logs/node2
 exposedPort=27018
