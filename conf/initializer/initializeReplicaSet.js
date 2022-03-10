@@ -45,7 +45,7 @@ function waitForPrimary(maxAttempts, string) {
     }
     sleep(1000);
   }
-  throw "No primary found in 20 seconds";
+  throw `No primary found in ${maxAttempts} seconds`;
 }
 
 function initializeReplicaSet(config, attempts) {

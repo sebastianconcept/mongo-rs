@@ -1,10 +1,13 @@
 #!/bin/bash
-imageName=mongo:4010
+imageName=mongo:current
 
 containerName=mongo$1
 networkName=$2
-dataDir=data/node$1
+# dataDir=data/node$1
+dataDir=/Volumes/RAMDisk/data/node$1
 logDir=logs/node$1
+
+# Will use ports starting from 27017
 exposedPort=$((27016 + $1))
 mongoDefaultPort=27017
 

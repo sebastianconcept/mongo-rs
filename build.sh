@@ -3,5 +3,5 @@
 echo "Building..."
 
 docker build \
-  -t mongo:$1 \
+  -t mongo:current \
   $(pwd)/conf/
